@@ -1,4 +1,4 @@
-html, body, section{
+html, body, section, .container{
   height: 100%;
   width: 100%;
 }
@@ -17,17 +17,15 @@ body {
   justify-content: center;
 }
 img{
-  width: 800px;
+  width: 600px;
+  margin-top: 150px;
+  margin-bottom: 100px;
 }
 .image-box{
-  margin-top: 50px;
-}
-
-h1 {
-  font-family: "Pacifico", cursive;
+  background-color: transparent;
+  width: 1000px;
+  height: 500px;
   text-align: center;
-  font-size: 72px;
-  margin: 0px;
 }
 .arrow-left,
 .arrow-right {
@@ -58,4 +56,16 @@ h1 {
 .arrow-left::after {
   left: 18px;
   transform: rotate(315deg);
+}
+ul{
+  display: flex;
+  justify-content: center;
+}
+li {
+  width: 30px;
+  float: left;
+}
+li::marker {
+  color: darkblue;
+  font-size: 2rem;
 }
