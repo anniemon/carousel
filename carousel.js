@@ -1,8 +1,5 @@
 /*
-Day2
-좌측 화살표 클릭시 이전 이미지 보여주기
-우측 화살표 클릭시 다음 이미지 보여주기
-
+이미지 하단의 Dot를 누를 경우, 해당 순번의 이미지 보여주기
 
 dot = ul.li
 brainstorming for carousel
@@ -16,30 +13,41 @@ someImageElement.src = "/images/image-1.png";
 */
 
 const container = document.querySelector(".container"),
-    imageBox = container.querySelector(".image-box"),
+    image = container.querySelector("img"),
     arrowLeft = container.querySelector(".arrow-left"),
-    arrowRight = container.querySelector(".arrow-right"),
-    listBox = imageBox.querySelector(".list-box");
-
-/*
-function paintImage() {
-    const image = new Image();
-    image.src = `images/image-1.jpg`;
-    image.classList.add("currentImage");
-    imageBox.prepend(image);       이걸 굳이 지금 js에서 해야되는지 잘 모르겠네.....음...
-}
-*/
-
-function paintDot() {
+    arrowRight = container.querySelector(".arrow-right");
 
 
+let Index = 1;
+const ACTIVE = "active";
+
+function goLeft(){
+    if (Index === 1){
+        Index = 6;
+    }
+    const minusNumber = Index - 1;
+    image.src = `images/image-${minusNumber}.jpg`;
+    Index = minusNumber;
 }
 
-paintDot();
+function goRight(){
+    if (Index === 5){
+        Index = 0;
+    } 
+    const plusNumber = Index + 1;
+    image.src = `images/image-${plusNumber}.jpg`;
+    Index = plusNumber;
+}
 
+function ControlIndex(){
+    const li1 = document.getElementById("1");
+    li1.classList.add(ACTIVE);
+}
 
 function init() {
-    paintImage();
+    ControlIndex();
+    arrowLeft.addEventListener("click", goLeft);
+    arrowRight.addEventListener("click", goRight);
 }
 
 init();

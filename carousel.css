@@ -71,6 +71,9 @@ li {
   float: left;
 }
 li::marker {
-  color: darkblue;
+  color: darkgray;
   font-size: 2rem;
+}
+.active::marker{
+  color: darkblue;
 }
