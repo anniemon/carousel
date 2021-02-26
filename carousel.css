@@ -62,18 +62,17 @@ img{
   left: 18px;
   transform: rotate(315deg);
 }
-ul{
-  display: flex;
-  justify-content: center;
+ul {
+  padding: 0px;
+  margin: 0px;
 }
-li {
-  width: 30px;
-  float: left;
+button {
+  padding: 6px;
+  margin: 10px;
+  background-color: darkgray;
+  border: none;
+  border-radius: 50%;
 }
-li::marker {
-  color: darkgray;
-  font-size: 2rem;
-}
-.active::marker{
-  color: darkblue;
+.active{
+  background-color: darkblue;
 }
