@@ -20,32 +20,39 @@ const container = document.querySelector(".container"),
 
 let Index = 1;
 const ACTIVE = "active";
+let LI = document.getElementById(Index);
 
 function goLeft(){
     if (Index === 1){
         Index = 6;
     }
+    LI.classList.remove(ACTIVE);
     const minusNumber = Index - 1;
     image.src = `images/image-${minusNumber}.jpg`;
     Index = minusNumber;
+    LI = document.getElementById(Index);
+    LI.classList.add(ACTIVE);
 }
 
 function goRight(){
     if (Index === 5){
         Index = 0;
-    } 
+    }
+    LI.classList.remove(ACTIVE);
     const plusNumber = Index + 1;
     image.src = `images/image-${plusNumber}.jpg`;
     Index = plusNumber;
+    LI = document.getElementById(Index);
+    LI.classList.add(ACTIVE);
 }
 
-function ControlIndex(){
-    const li1 = document.getElementById("1");
-    li1.classList.add(ACTIVE);
-}
+
+/*
+li::marker에 eventlistner추가........가능한가?
+각각 눌렀을 떄 해당 이미지 띄우기.
+*/
 
 function init() {
-    ControlIndex();
     arrowLeft.addEventListener("click", goLeft);
     arrowRight.addEventListener("click", goRight);
 }
