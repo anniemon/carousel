@@ -22,7 +22,6 @@ img{
 .image-box{
   background-color: transparent;
   min-width: 1000px;
-  height: 500px;
   text-align: center;
   margin: 0 auto;
 }
@@ -37,10 +36,10 @@ img{
   border-radius: 50%;
 }
 .arrow-left{
-  left: 30px;
+  left: 50px;
 }
 .arrow-right{
-  right: 30px;
+  right: 50px;
 }
 .arrow-right::after,
 .arrow-left::after {
@@ -64,13 +63,14 @@ img{
 }
 ul {
   padding: 0px;
-  margin: 0px;
+  margin-top: 15px;
+  font-size: 0px;
 }
-button {
-  padding: 6px;
-  margin: 10px;
+span {
+  display: inline-block;
+  padding: 8px;
+  margin: 15px;
   background-color: darkgray;
-  border: none;
   border-radius: 50%;
 }
 .active{
