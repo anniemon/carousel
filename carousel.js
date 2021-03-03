@@ -16,13 +16,13 @@ function goLeft(){
     if (INDEX === 1){
         INDEX = 6;
     }
-    BUTTON.classList.remove(ACTIVE);
     const minusNumber = INDEX - 1;
     image.src = `images/image-${minusNumber}.jpg`;
-    INDEX = minusNumber;
-    BUTTON = document.getElementById(INDEX);
     image.decode()
     .then(function(){
+        BUTTON.classList.remove(ACTIVE);
+        INDEX = minusNumber;
+        BUTTON = document.getElementById(INDEX);
         BUTTON.classList.add(ACTIVE);
     })
 }
@@ -31,13 +31,13 @@ function goRight(){
     if (INDEX === 5){
         INDEX = 0;
     }
-    BUTTON.classList.remove(ACTIVE);
     const plusNumber = INDEX + 1;
     image.src = `images/image-${plusNumber}.jpg`;
-    INDEX = plusNumber;
-    BUTTON = document.getElementById(INDEX);
     image.decode()
     .then(function(){
+        BUTTON.classList.remove(ACTIVE);
+        INDEX = plusNumber;
+        BUTTON = document.getElementById(INDEX);
         BUTTON.classList.add(ACTIVE);
     })
 }
