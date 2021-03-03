@@ -21,7 +21,10 @@ function goLeft(){
     image.src = `images/image-${minusNumber}.jpg`;
     Index = minusNumber;
     BUTTON = document.getElementById(Index);
-    BUTTON.classList.add(ACTIVE);
+    image.decode()
+    .then(function(){
+        BUTTON.classList.add(ACTIVE);
+    })
 }
 
 function goRight(){
@@ -33,7 +36,10 @@ function goRight(){
     image.src = `images/image-${plusNumber}.jpg`;
     Index = plusNumber;
     BUTTON = document.getElementById(Index);
-    BUTTON.classList.add(ACTIVE);
+    image.decode()
+    .then(function(){
+        BUTTON.classList.add(ACTIVE);
+    })
 }
 
 function paint1(){
