@@ -8,19 +8,19 @@ const container = document.querySelector(".container"),
     marker4 = document.getElementById("4"),
     marker5 = document.getElementById("5");
 
-let Index = 1;
+let INDEX = 1;
 const ACTIVE = "active";
-let BUTTON = document.getElementById(Index);
+let BUTTON = document.getElementById(INDEX);
 
 function goLeft(){
-    if (Index === 1){
-        Index = 6;
+    if (INDEX === 1){
+        INDEX = 6;
     }
     BUTTON.classList.remove(ACTIVE);
-    const minusNumber = Index - 1;
+    const minusNumber = INDEX - 1;
     image.src = `images/image-${minusNumber}.jpg`;
-    Index = minusNumber;
-    BUTTON = document.getElementById(Index);
+    INDEX = minusNumber;
+    BUTTON = document.getElementById(INDEX);
     image.decode()
     .then(function(){
         BUTTON.classList.add(ACTIVE);
@@ -28,14 +28,14 @@ function goLeft(){
 }
 
 function goRight(){
-    if (Index === 5){
-        Index = 0;
+    if (INDEX === 5){
+        INDEX = 0;
     }
     BUTTON.classList.remove(ACTIVE);
-    const plusNumber = Index + 1;
+    const plusNumber = INDEX + 1;
     image.src = `images/image-${plusNumber}.jpg`;
-    Index = plusNumber;
-    BUTTON = document.getElementById(Index);
+    INDEX = plusNumber;
+    BUTTON = document.getElementById(INDEX);
     image.decode()
     .then(function(){
         BUTTON.classList.add(ACTIVE);
