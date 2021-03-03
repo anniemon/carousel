@@ -47,29 +47,41 @@ function paint1(){
 }
 function paint2(){
     image.src = `images/image-2.jpg`;
-    BUTTON.classList.remove(ACTIVE);
-    BUTTON = document.getElementById("2");
-    BUTTON.classList.add(ACTIVE);
+    image.decode()
+    .then(function(){
+        BUTTON.classList.remove(ACTIVE);
+        BUTTON = document.getElementById("2");
+        BUTTON.classList.add(ACTIVE);
+        })
 }
 function paint3(){
     image.src = `images/image-3.jpg`;
-    BUTTON.classList.remove(ACTIVE);
-    BUTTON = document.getElementById("3");
-    BUTTON.classList.add(ACTIVE);
+    image.decode()
+    .then(function(){
+        BUTTON.classList.remove(ACTIVE);
+        BUTTON = document.getElementById("3");
+        BUTTON.classList.add(ACTIVE);
+        })
 }
 
 function paint4(){
     image.src = `images/image-4.jpg`;
-    BUTTON.classList.remove(ACTIVE);
-    BUTTON = document.getElementById("4");
-    BUTTON.classList.add(ACTIVE);
+    image.decode()
+    .then(function(){
+        BUTTON.classList.remove(ACTIVE);
+        BUTTON = document.getElementById("4");
+        BUTTON.classList.add(ACTIVE);
+        })
 }
 
 function paint5(){
     image.src = `images/image-5.jpg`;
-    BUTTON.classList.remove(ACTIVE);
-    BUTTON = document.getElementById("5");
-    BUTTON.classList.add(ACTIVE);
+    image.decode()
+    .then(function(){
+        BUTTON.classList.remove(ACTIVE);
+        BUTTON = document.getElementById("5");
+        BUTTON.classList.add(ACTIVE);
+        })
 }
 
 
