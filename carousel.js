@@ -38,9 +38,12 @@ function goRight(){
 
 function paint1(){
     image.src = `images/image-1.jpg`;
-    BUTTON.classList.remove(ACTIVE);
-    BUTTON = document.getElementById("1");
-    BUTTON.classList.add(ACTIVE);
+    image.decode()
+    .then(function(){
+        BUTTON.classList.remove(ACTIVE);
+        BUTTON = document.getElementById("1");
+        BUTTON.classList.add(ACTIVE);
+        })
 }
 function paint2(){
     image.src = `images/image-2.jpg`;
