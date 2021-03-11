@@ -27,6 +27,7 @@ img{
 }
 .arrow-left,
 .arrow-right {
+  cursor:pointer;
   position:relative;
   padding: 5px;
   margin: 30px;
@@ -72,6 +73,7 @@ span {
   margin: 15px;
   background-color: darkgray;
   border-radius: 50%;
+  cursor: pointer;
 }
 .active{
   background-color: darkblue;
