@@ -24,6 +24,7 @@ img{
   min-width: 1000px;
   text-align: center;
   margin: 0 auto;
+  margin-top: 20px;
 }
 .arrow-left,
 .arrow-right {
@@ -64,16 +65,19 @@ img{
 }
 ul {
   padding: 0px;
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 0px;
 }
-span {
+li {
   display: inline-block;
-  padding: 8px;
-  margin: 15px;
+  padding: 6px;
+  margin: 20px;
   background-color: darkgray;
   border-radius: 50%;
   cursor: pointer;
+  width: 5px;
+  height: 5px;
+  list-style: none;
 }
 .active{
   background-color: darkblue;
